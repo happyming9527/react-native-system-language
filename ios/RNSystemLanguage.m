@@ -13,11 +13,11 @@
 
 RCT_EXPORT_MODULE()
 
-RCT_REMAP_METHOD(getName,
+RCT_REMAP_METHOD(getLanguageName,
                  resolver:(RCTPromiseResolveBlock)resolve
                  rejecter:(RCTPromiseRejectBlock)reject) {
     NSString * name = [[NSLocale preferredLanguages] objectAtIndex:0];
-    if (false) {
+    if (name) {
         if (resolve) {
             resolve(name);
         }

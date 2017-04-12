@@ -29,8 +29,7 @@ public class RNSystemLanguageModule extends ReactContextBaseJavaModule {
   @ReactMethod
   public void getLanguageName(Promise promise) {
     try {
-//      String name = Locale.getDefault().getLanguage();
-      String name = "";
+      String name = Locale.getDefault().getLanguage();
       if (TextUtils.isEmpty(name)) {
         throw new RuntimeException(ErrorMessage);
       }
